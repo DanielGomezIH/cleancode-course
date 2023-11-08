@@ -1,5 +1,4 @@
 (() => {
-
   function getMovieInfoById(id: string) {
     console.log({ id });
   }
@@ -12,7 +11,6 @@
     console.log({ id });
   }
 
-
   interface CreateMovieOptions {
     cast: string[];
     description: string;
@@ -24,17 +22,13 @@
     cast,
     description,
     rating,
-    title }: CreateMovieOptions): void {
-
+    title,
+  }: CreateMovieOptions): void {
     console.log({ cast, description, rating, title });
-
   }
-
-
 
   // Crea un nuevo actor
   function createActor(fullName: string, birthdate: Date): boolean {
-
     // tarea asincrona para verificar nombre
     // ..
     // ..
@@ -42,27 +36,19 @@
 
     console.log('Crear actor', birthdate);
     return true;
-
   }
 
   //Continuar
 
-  const getPayAmount = (
-    { isDead = false,
-      isSeparated = true,
-      isRetired = false, }): number => {
-
+  const getPayAmount = ({
+    isDead = false,
+    isSeparated = true,
+    isRetired = false,
+  }): number => {
     if (isDead) return 1500;
 
     if (isSeparated) return 2500;
 
     return isRetired ? 3000 : 4000;
-
-  }
-
-
+  };
 })();
-
-
-
-
